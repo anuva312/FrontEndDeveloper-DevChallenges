@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
-import "./Button.css";
+import React from "react";
+import SetIcons from "./SetIcons";
+import "./button.css";
 
 function Button({
-  variant = "",
+  variant = "default",
   disableShadow = false,
   disabled = false,
-  iconPosition = "",
-  size = "",
+  startIcon = "",
+  endIcon = "",
+  size = "md",
   color = "",
   onClick,
   id,
@@ -15,21 +17,15 @@ function Button({
   return (
     <button
       className={
-        variant +
-        (disableShadow ? " no-shadow" : "") +
-        " " +
-        size +
-        " " +
-        color +
-        " " +
-        iconPosition
+        variant + (disableShadow ? " no-shadow" : "") + " " + size + " " + color
       }
       id={id}
       disabled={disabled}
       onClick={onClick}
     >
-      {/* <i class="material-icons">search</i> */}
+      <SetIcons iconName={startIcon} />
       {children}
+      <SetIcons iconName={endIcon} />
     </button>
   );
 }
