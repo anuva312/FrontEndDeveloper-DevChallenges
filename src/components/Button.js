@@ -1,6 +1,6 @@
 import React from "react";
-import SetIcons from "./SetIcons";
-import "./button.css";
+import SetIcons from "../stories/SetIcons";
+import "./Button.css";
 
 function Button({
   variant = "default",
