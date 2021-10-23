@@ -1,14 +1,7 @@
 import "./App.css";
-import Button from "./components/Button";
 
 function App() {
-  return (
-    <div className="App">
-      <p></p>
-
-      <Button color="danger">Click Me!</Button>
-    </div>
-  );
+  return <div className="App">DevChallenges</div>;
 }
 
 export default App;
