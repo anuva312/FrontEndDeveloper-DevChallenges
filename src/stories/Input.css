@@ -1,0 +1,92 @@
+:root {
+  --input-color: black;
+}
+
+.input-container {
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+label {
+  color: #333333;
+}
+
+input {
+  box-sizing: border-box;
+  border: 1px solid;
+  outline-color: #828282;
+  width: 200px;
+  height: 56px;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+input:hover {
+  outline-color: #333333;
+}
+
+input:focus {
+  outline-color: var(--primary);
+}
+
+input.error,
+input.error:focus {
+  border-color: var(--danger);
+  outline-color: var(--danger);
+}
+
+label.error {
+  color: var(--danger);
+}
+
+p {
+  color: #828282;
+  margin: 0px;
+  font-size: 10px;
+}
+
+p.error {
+  color: var(--danger);
+}
+
+.text-color {
+  color: var(--input-color);
+}
+
+.input-box-container {
+  width: 100%;
+  position: relative;
+}
+
+.inherit-width {
+  width: inherit;
+}
+
+.box-icon {
+  /* z-index: 9999; */
+  position: absolute;
+  top: 8px;
+  padding: 10px 10px;
+  color: #828282;
+}
+.add-icon-start {
+  padding-left: 30px;
+}
+.add-icon-end {
+  padding-right: 30px;
+}
+.icon-start {
+  left: 0;
+}
+
+.icon-end-fixed-width {
+  left: calc(200px - 38px);
+}
+
+.icon-end {
+  right: 0;
+}
