@@ -5,8 +5,8 @@ import LockIcon from "@mui/icons-material/Lock";
 import SearchIcon from "@mui/icons-material/Search";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 
-const fontSize = "1.3em";
-export default function SetIcons({ iconName }) {
+export default function SetIcons({ iconName, size }) {
+  const fontSize = size || "1.3em";
   if (iconName) {
     if (iconName === "delete") {
       return <DeleteIcon sx={{ fontSize }} />;
