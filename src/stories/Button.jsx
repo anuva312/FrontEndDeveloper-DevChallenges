@@ -2,36 +2,33 @@ import React from "react";
 import SetIcons from "./SetIcons";
 import "./button.css";
 
-
-function Button({
-  variant = "default",
-  disableShadow = false,
-  disabled = false,
-  startIcon="",
-  endIcon="",
-  size = "md",
-  color = "",
-  onClick,
-  id,
-  children,
-}) {
+function Button(props) {
+  const {
+    variant,
+    disableShadow,
+    startIcon,
+    endIcon,
+    size,
+    color,
+    children,
+  } = props;
+  const _variant = variant || "default";
+  const _size = size || "md";
   return (
     <button
       className={
-        variant +
+        _variant +
         (disableShadow ? " no-shadow" : "") +
         " " +
-        size +
+        _size +
         " " +
         color
       }
-      id={id}
-      disabled={disabled}
-      onClick={onClick}
+      {...props}
     >
-      <SetIcons iconName={startIcon}/>
+      <SetIcons iconName={startIcon} />
       {children}
-      <SetIcons iconName={endIcon}/>
+      <SetIcons iconName={endIcon} />
     </button>
   );
 }
