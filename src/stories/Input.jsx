@@ -18,6 +18,7 @@ function Input(props) {
     rows,
   } = props;
   const _id = id || "mytextarea";
+  const _rows = rows || 4;
   if (color) r.style.setProperty("--input-color", color);
   const element = document.getElementById(_id);
 
@@ -63,6 +64,7 @@ function Input(props) {
           <textarea
             {...props}
             id={_id}
+            rows={_rows}
             className={`${fullWidth ? "inherit-width" : ""} ${
               error ? "error" : ""
             } ${color ? "text-color" : ""} ${

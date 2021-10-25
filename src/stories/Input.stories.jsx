@@ -30,7 +30,9 @@ export default {
     ismultiline: {
       control: { type: "boolean" },
     },
-
+    rows: {
+      control: { type: "number" },
+    },
     size: {
       options: ["sm", "md"],
       control: { type: "radio" },
@@ -102,5 +104,5 @@ Muiltiline.args = {
   label: "Label",
   placeholder: "Placeholder",
   ismultiline: true,
-  rows: "4",
+  rows: 4,
 };
