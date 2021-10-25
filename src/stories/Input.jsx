@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SetIcons from "./SetIcons";
 import "./Input.css";
 
@@ -15,19 +15,24 @@ function Input(props) {
     color,
     ismultiline,
     id,
+    rows,
   } = props;
   const _id = id || "mytextarea";
   if (color) r.style.setProperty("--input-color", color);
-  if (ismultiline) {
-    r.style.setProperty(
-      "--textarea-height",
-      `${document.getElementById(_id).getBoundingClientRect().height}px`
-    );
-    r.style.setProperty(
-      "--textarea-width",
-      `${document.getElementById(_id).getBoundingClientRect().width}px`
-    );
-  }
+  const element = document.getElementById(_id);
+
+  useEffect(() => {
+    if (ismultiline && element) {
+      r.style.setProperty(
+        "--textarea-height",
+        `${element.getBoundingClientRect().height}px`
+      );
+      r.style.setProperty(
+        "--textarea-width",
+        `${element.getBoundingClientRect().width}px`
+      );
+    }
+  }, [fullWidth, ismultiline, rows, element]);
 
   return (
     <div className="input-container">

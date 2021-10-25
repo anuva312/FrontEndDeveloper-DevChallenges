@@ -107,6 +107,13 @@ p.error {
   top: 2px;
 }
 
+.add-icon-start {
+  padding-left: 30px;
+}
+.add-icon-end {
+  padding-right: 30px;
+}
+
 .box-icon.multiline.icon-end-fixed-width {
   top: calc(var(--textarea-height) - 38px);
   left: calc(var(--textarea-width) - 38px);
@@ -116,12 +123,6 @@ p.error {
   top: calc(var(--textarea-height) - 38px);
 }
 
-.add-icon-start {
-  padding-left: 30px;
-}
-.add-icon-end {
-  padding-right: 30px;
-}
 .icon-start {
   left: 0;
 }
