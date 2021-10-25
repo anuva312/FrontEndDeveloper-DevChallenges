@@ -30,9 +30,6 @@ export default {
     ismultiline: {
       control: { type: "boolean" },
     },
-    rows: {
-      control: { type: "number" },
-    },
     size: {
       options: ["sm", "md"],
       control: { type: "radio" },
@@ -80,6 +77,24 @@ HelperTextError.args = {
   placeholder: "Placeholder",
   helperText: "Some helper text here!",
   error: true,
+};
+export const StartIcon = Template.bind({});
+StartIcon.args = {
+  label: "Label",
+  placeholder: "Placeholder",
+  startIcon: "shoppingCart",
+};
+export const EndIcon = Template.bind({});
+EndIcon.args = {
+  label: "Label",
+  placeholder: "Placeholder",
+  endIcon: "shoppingCart",
+};
+export const InputText = Template.bind({});
+InputText.args = {
+  label: "Label",
+  placeholder: "Placeholder",
+  value: "Text",
 };
 export const SmallSized = Template.bind({});
 SmallSized.args = {
