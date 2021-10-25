@@ -20,9 +20,9 @@ function Input(props) {
   const _id = id || "mytextarea";
   const _rows = rows || 4;
   if (color) r.style.setProperty("--input-color", color);
-  const element = document.getElementById(_id);
 
   useEffect(() => {
+    const element = document.getElementById(_id);
     if (ismultiline && element) {
       r.style.setProperty(
         "--textarea-height",
@@ -33,7 +33,7 @@ function Input(props) {
         `${element.getBoundingClientRect().width}px`
       );
     }
-  }, [fullWidth, ismultiline, rows, element]);
+  }, [fullWidth, ismultiline, rows, _id, startIcon, endIcon]);
 
   return (
     <div className="input-container">
