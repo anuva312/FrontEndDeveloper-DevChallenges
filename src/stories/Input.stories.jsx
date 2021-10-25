@@ -24,8 +24,16 @@ export default {
     disabled: {
       control: { type: "boolean" },
     },
-    inherit_width: {
+    fullWidth: {
       control: { type: "boolean" },
+    },
+    ismultiline: {
+      control: { type: "boolean" },
+    },
+
+    size: {
+      options: ["sm", "md"],
+      control: { type: "radio" },
     },
     startIcon: {
       options: ["delete", "visibility", "search", "shoppingCart", "lock"],
@@ -70,4 +78,29 @@ HelperTextError.args = {
   placeholder: "Placeholder",
   helperText: "Some helper text here!",
   error: true,
+};
+export const SmallSized = Template.bind({});
+SmallSized.args = {
+  label: "Label",
+  placeholder: "Placeholder",
+  size: "sm",
+};
+export const MediumSized = Template.bind({});
+MediumSized.args = {
+  label: "Label",
+  placeholder: "Placeholder",
+  size: "md",
+};
+export const FullWidth = Template.bind({});
+FullWidth.args = {
+  label: "Label",
+  placeholder: "Placeholder",
+  fullWidth: true,
+};
+export const Muiltiline = Template.bind({});
+Muiltiline.args = {
+  label: "Label",
+  placeholder: "Placeholder",
+  ismultiline: true,
+  rows: "4",
 };

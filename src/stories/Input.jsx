@@ -8,12 +8,27 @@ function Input(props) {
     error,
     startIcon,
     endIcon,
-    inherit_width,
+    fullWidth,
     helperText,
+    size,
     label,
     color,
+    ismultiline,
+    id,
   } = props;
+  const _id = id || "mytextarea";
   if (color) r.style.setProperty("--input-color", color);
+  if (ismultiline) {
+    r.style.setProperty(
+      "--textarea-height",
+      `${document.getElementById(_id).getBoundingClientRect().height}px`
+    );
+    r.style.setProperty(
+      "--textarea-width",
+      `${document.getElementById(_id).getBoundingClientRect().width}px`
+    );
+  }
+
   return (
     <div className="input-container">
       <label htmlFor={`input-box`} className={`${error ? "error" : ""}`}>
@@ -21,23 +36,40 @@ function Input(props) {
       </label>
       <div className="input-box-container">
         {startIcon ? (
-          <span className="box-icon icon-start">
+          <span
+            className={`box-icon icon-start ${size} ${
+              ismultiline ? "multiline" : ""
+            }`}
+          >
             <SetIcons iconName={startIcon} size="1.6em" />
           </span>
         ) : null}
-        <input
-          {...props}
-          className={`${inherit_width ? "inherit-width" : ""} ${
-            error ? "error" : ""
-          } ${startIcon ? "add-icon-start" : ""} ${
-            endIcon ? "add-icon-end" : ""
-          } ${color ? "text-color" : ""}`}
-        ></input>
+        {!ismultiline ? (
+          <input
+            {...props}
+            id={_id}
+            className={`${fullWidth ? "inherit-width" : ""} ${
+              error ? "error" : ""
+            } ${startIcon ? "add-icon-start" : ""} ${
+              endIcon ? "add-icon-end" : ""
+            } ${color ? "text-color" : ""} ${size}`}
+          ></input>
+        ) : (
+          <textarea
+            {...props}
+            id={_id}
+            className={`${fullWidth ? "inherit-width" : ""} ${
+              error ? "error" : ""
+            } ${color ? "text-color" : ""} ${
+              startIcon ? "add-icon-start" : ""
+            } ${endIcon ? "add-icon-end" : ""}`}
+          ></textarea>
+        )}
         {endIcon ? (
           <span
-            className={` box-icon icon-end${
-              !inherit_width ? "-fixed-width" : ""
-            }`}
+            className={` box-icon icon-end${!fullWidth ? "-fixed-width" : ""} ${
+              ismultiline ? "multiline" : ""
+            } ${size}`}
           >
             <SetIcons iconName={endIcon} size="1.6em" />
           </span>

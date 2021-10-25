@@ -1,5 +1,7 @@
 :root {
   --input-color: black;
+  --textarea-height: 0px;
+  --textarea-width: 0px;
 }
 
 .input-container {
@@ -13,28 +15,51 @@ label {
   color: #333333;
 }
 
-input {
+input,
+textarea {
   box-sizing: border-box;
   border: 1px solid;
   outline-color: #828282;
-  width: 200px;
-  height: 56px;
   border-radius: 8px;
   font: inherit;
   font-weight: 500;
   font-size: 14px;
+  padding: 10px;
 }
 
-input:hover {
+input {
+  width: 200px;
+  height: 56px;
+}
+
+textarea {
+  overflow: hidden;
+  resize: none;
+}
+
+input:hover,
+textarea:hover {
   outline-color: #333333;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   outline-color: var(--primary);
 }
 
+input.sm {
+  width: 200px;
+  height: 40px;
+}
+
+input.inherit-width.sm {
+  width: inherit;
+}
+
 input.error,
-input.error:focus {
+textarea.error,
+input.error:focus,
+textarea.error:focus {
   border-color: var(--danger);
   outline-color: var(--danger);
 }
@@ -73,6 +98,24 @@ p.error {
   padding: 10px 10px;
   color: #828282;
 }
+
+.box-icon.sm {
+  top: 2px;
+}
+
+.box-icon.multiline {
+  top: 2px;
+}
+
+.box-icon.multiline.icon-end-fixed-width {
+  top: calc(var(--textarea-height) - 38px);
+  left: calc(var(--textarea-width) - 38px);
+}
+
+.box-icon.multiline.icon-end {
+  top: calc(var(--textarea-height) - 38px);
+}
+
 .add-icon-start {
   padding-left: 30px;
 }
