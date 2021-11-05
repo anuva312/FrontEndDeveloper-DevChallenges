@@ -1,10 +1,26 @@
 # devChallenges - FrontEndDeveloper
 
-These are my solutions to the devChallenges for front-end developers.
+Solutions for the [Button Component Challenge](https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY) and [Input COmponent Challenge](https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY) from [Devchallenges.io](https://devchallenges.io).
+
+<!-- TABLE OF CONTENTS -->
+
+## Table of Contents
+
+- [Challenge](#challenge)
+  - [Challenge I](#the-button-component)
+  - [Challenge II](#the-input-component)
+- [Solution](#solution)
+  - [Demo](#demo)
+  - [Built With](#built-with)
+- [How to Use](#how-to-use)
+
+<!-- Challenge -->
+
+## Challenge
 
 ---
 
-## Challenge I : Button Component
+### The Button Component
 
 Create a reusable button with all the states in the design and a page displaying all the states.
 
@@ -22,7 +38,7 @@ Fulfill user stories below:
 
 ---
 
-## Challenge II : Input Component
+### The Input Component
 
 Create a reusable input with all the states in the design and a page displaying all the states.
 
@@ -39,3 +55,33 @@ Fulfill user stories below:
 - User story: When I hover or focus, I can see visual indicators
 - User story: I can still access all input attributes
 - User story (optional): Show input in a similar way like the design or use Storybook. Otherwise, showing the input in multiple states is enough
+
+<!-- Solution -->
+
+## Solution
+
+### Demo
+
+_Find the components in action [here](https://615552d24d764a003a4c2874-gujboixrnt.chromatic.com/?path=/story/devchallenges--page)!_
+
+### Built With
+
+- [React](https://reactjs.org/)
+- [Storybook](https://storybook.js.org/)
+
+## How To Use
+
+To clone and run this application, you'll need [Git](https://git-scm.com) and [yarn](https://yarnpkg.com/).
+
+From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/{your-user-name}/{your-project-name}
+
+# Install dependencies
+$ yarn install
+
+# Run the app
+$ yarn storybook
+```
