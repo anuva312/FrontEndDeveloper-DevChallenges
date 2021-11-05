@@ -1,6 +1,6 @@
 # devChallenges - FrontEndDeveloper
 
-Solutions for the [Button Component Challenge](https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY) and [Input COmponent Challenge](https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY) from [Devchallenges.io](https://devchallenges.io).
+Solutions for the [Button Component Challenge](https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY) and [Input Component Challenge](https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY) from [Devchallenges.io](https://devchallenges.io).
 
 <!-- TABLE OF CONTENTS -->
 
@@ -17,8 +17,6 @@ Solutions for the [Button Component Challenge](https://devchallenges.io/challeng
 <!-- Challenge -->
 
 ## Challenge
-
----
 
 ### The Button Component
 
@@ -77,7 +75,7 @@ From your command line:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/{your-user-name}/{your-project-name}
+$ git clone https://github.com/anuva312/FrontEndDeveloper-devChallenges
 
 # Install dependencies
 $ yarn install
