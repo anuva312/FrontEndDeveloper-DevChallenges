@@ -1,6 +1,6 @@
 # devChallenges - FrontEndDeveloper
 
-Solutions for the [Button Component Challenge](https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY) and [Input Component Challenge](https://devchallenges.io/challenges/TSqutYM4c5WtluM7QzGp) from [Devchallenges.io](https://devchallenges.io).
+Solutions for the [Button Component Challenge](https://legacy.devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY) and [Input Component Challenge](https://legacy.devchallenges.io/challenges/TSqutYM4c5WtluM7QzGp) from [Devchallenges.io](https://legacy.devchallenges.io).
 
 <!-- TABLE OF CONTENTS -->
 
